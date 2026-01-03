@@ -76,7 +76,7 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr);
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
       gap: 32px;
       align-items: center;
     }
@@ -110,9 +110,30 @@
     }
 
     .hero-card {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-photo {
+      width: 190px;
+      height: 190px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 2px solid rgba(148, 163, 184, 0.7);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+      background: #020617;
+    }
+
+    .hero-meta-card {
       background: radial-gradient(circle at top left, rgba(34,197,94,0.3), transparent 55%), var(--card);
       border-radius: 18px;
-      padding: 18px 18px 16px;
+      padding: 16px 18px 14px;
       border: 1px solid rgba(148, 163, 184, 0.2);
       font-size: 0.92rem;
     }
@@ -121,7 +142,7 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 12px;
+      margin-top: 8px;
       font-size: 0.8rem;
     }
 
@@ -281,19 +302,20 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
-      <a href="#research">Research</a>
+      <a href="#research">Publications</a>
+      <a href="#awards">Awards</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main>
-    <!-- Hero / Summary -->
-    <section class="hero" id="home">
+    <!-- Hero / Summary with profile picture -->
+    <section class="hero" id="about">
       <div>
         <div class="badge">Climate Scientist · GIS & Remote Sensing · UGC NET</div>
         <h1 class="hero-title">Climate change scientist specialising in coastal vulnerability and geospatial analysis.</h1>
         <p class="hero-sub">
-          Accomplished climate scientist with PhD expertise in climate change, geo‑spatial technology and disaster risk assessment, with 12+ years of research and 6 years of teaching experience. [file:24]
+          Accomplished climate scientist with PhD expertise in climate change, geo‑spatial technology and disaster risk assessment, combining 12+ years of research with 6 years of teaching experience. [file:24]
         </p>
         <p class="tagline">
           Work focuses on climate and coastal vulnerability assessment, GIS and remote sensing based mapping, and carbon sequestration projects with government and academic partners. [file:24]
@@ -301,23 +323,28 @@
       </div>
 
       <aside class="hero-card">
-        <strong>Quick facts</strong>
-        <div class="hero-meta">
-          <div class="meta-item">
-            <div class="meta-label">Location</div>
-            Ahmedabad, Gujarat, India [file:24]
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Experience</div>
-            12+ years research · 6 years teaching [file:24]
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Current role</div>
-            Visiting Faculty, Climate Change, Gujarat University [file:24]
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Contact</div>
-            <a href="mailto:nirmaldesai329@gmail.com">nirmaldesai329@gmail.com</a> [file:24]
+        <div class="profile-wrapper">
+          <img src="Dec 20, 2025,bbg.png" alt="Dr. Nirmal S. Desai profile photograph" class="profile-photo">
+        </div>
+        <div class="hero-meta-card">
+          <strong>Quick facts</strong>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <div class="meta-label">Location</div>
+              Ahmedabad, Gujarat 380019, India [file:24]
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Experience</div>
+              12+ years research · 6 years teaching [file:24]
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Current role</div>
+              Visiting Faculty, Climate Change, Gujarat University [file:24]
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Contact</div>
+              <a href="mailto:nirmaldesai329@gmail.com">nirmaldesai329@gmail.com</a> [file:24]
+            </div>
           </div>
         </div>
       </aside>
@@ -350,6 +377,7 @@
             <span class="pill">Grant proposals</span>
             <span class="pill">Lecturing & mentoring</span>
             <span class="pill">Presentations</span>
+            <span class="pill">Research & analysis</span>
             <span class="pill">Project management</span>
             <span class="pill">Course outreach</span>
             <span class="pill">Microsoft Office</span>
@@ -358,31 +386,11 @@
           </div>
         </div>
       </div>
-
-      <div style="margin-top:14px;" class="two-col">
-        <div class="card">
-          <h3>Languages</h3>
-          <div class="pill-row">
-            <span class="pill pill-strong">Gujarati (Native)</span>
-            <span class="pill">English (Proficient)</span>
-            <span class="pill">Hindi (Intermediate)</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Interests</h3>
-          <div class="pill-row">
-            <span class="pill">Birding</span>
-            <span class="pill">Herpetofauna</span>
-            <span class="pill">Photography</span>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
-      <h2 class="section-title">Professional experience</h2>
+      <h2 class="section-title">Experience</h2>
       <p class="section-sub">Teaching, research and applied projects across climate change, environmental science and forest research. [file:24]</p>
 
       <div class="grid-3">
@@ -392,7 +400,7 @@
           <ul class="list">
             <li>Deliver lectures on climate change, climate science and vulnerability assessment for postgraduate students.</li>
             <li>Develop curriculum on geospatial techniques and disaster risk mapping.</li>
-            <li>Mentor research on climate vulnerability, coastal mapping and carbon sequestration.</li>
+            <li>Mentor research projects on climate vulnerability, coastal mapping and carbon sequestration.</li>
           </ul>
         </div>
 
@@ -400,9 +408,9 @@
           <h3>Research Associate‑I</h3>
           <small>Gujarat Forest Research Foundation (GFRF) · Sept 2021 – July 2022</small>
           <ul class="list">
-            <li>Co‑led INR 20,00,000 project on tree carbon sequestration assessment using non‑destructive methods in Ahmedabad. </li>
+            <li>Co‑led INR 20,00,000 project on tree carbon sequestration assessment using non‑destructive methods in Ahmedabad. [file:24]</li>
             <li>Applied GIS and remote sensing for spatial analysis and LULC mapping of urban trees and wetlands.</li>
-            <li>Compiled technical reports and research outputs for government stakeholders.</li>
+            <li>Compiled technical reports and research findings for government stakeholders.</li>
           </ul>
         </div>
 
@@ -410,22 +418,22 @@
           <h3>Visiting Faculty – Environmental Science</h3>
           <small>Pandit Deendayal Energy University, Gandhinagar · July 2020 – July 2021</small>
           <ul class="list">
-            <li>Taught environmental studies, ethics and leadership at graduate level.</li>
-            <li>Developed course materials on EIA, climate adaptation, examination and evaluation.</li>
+            <li>Taught environmental studies, environmental ethics and environmental leadership at graduate level.</li>
+            <li>Developed course materials on environmental impact assessment, climate adaptation, examination and evaluation.</li>
           </ul>
         </div>
       </div>
 
       <div class="card" style="margin-top:16px;">
-        <h3>Earlier teaching roles</h3>
+        <h3>Earlier teaching role</h3>
         <div class="timeline">
           <div class="timeline-item">
             <strong>Visiting Faculty – Climate Change</strong>
             <small>Gujarat University · Sept 2019 – June 2020</small>
             <div class="badge-small">Lecturing & student research supervision</div>
             <ul class="list">
-              <li>Facilitated lectures on climate change, biodiversity and extreme events.</li>
-              <li>Guided student research on geospatial climate assessment techniques.</li>
+              <li>Delivered lectures on climate change, biodiversity and extreme events.</li>
+              <li>Guided student research on geospatial climate assessment techniques, examination and evaluation.</li>
             </ul>
           </div>
         </div>
@@ -442,7 +450,7 @@
           <h3>PhD in Climate Change</h3>
           <small>Gujarat University · 2015 – 2019</small>
           <ul class="list">
-            <li>Thesis: Vulnerability Assessment and Disaster Risk Mapping for Coastal Region of Gujarat.</li>
+            <li>Thesis: Vulnerability Assessment and Disaster Risk Mapping for Coastal Region of Gujarat. [file:24]</li>
             <li>Guide: Dr. Archana U. Mankad.</li>
           </ul>
         </div>
@@ -469,40 +477,13 @@
       </div>
     </section>
 
-    <!-- Awards & Certifications -->
-    <section id="awards">
-      <h2 class="section-title">Awards & certifications</h2>
-      <p class="section-sub">Recognitions and fellowships for research, teaching and sustainability leadership. [file:24]</p>
-
-      <div class="grid-3">
-        <div class="card">
-          <ul class="list">
-            <li>UGC NET Qualified – Assistant Professorship, Environmental Sciences (2019).</li>
-            <li>UGC Rajiv Gandhi National Fellowship – JRF–SRF (2012 – 2017).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="list">
-            <li>Best Poster Award – International Conference CCIM 2019 (Research Category).</li>
-            <li>First Prize Poster Presentation – ICE TRAY 2015 (Research Category).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="list">
-            <li>RUSA FDP – Tools and Techniques in Biological Sciences (2018).</li>
-            <li>TERI University BLISS – Sustainability Science Summer School, New Delhi (2013).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research & Publications -->
+    <!-- Publications -->
     <section id="research">
-      <h2 class="section-title">Research & publications</h2>
+      <h2 class="section-title">Publications & project</h2>
       <p class="section-sub">Applied geospatial research on wetlands, avifauna, coastal systems and carbon sequestration. [file:24]</p>
 
       <div class="card">
-        <h3>Research project</h3>
+        <h3>Major research project</h3>
         <span class="badge-small">2021 – 2022</span>
         <ul class="list">
           <li>Assessment of Trees and Carbon Sequestration Potential (Non‑Destructive Method) – Ahmedabad, Gujarat. Funded by Gujarat Forest Department under GFRF (INR 20,00,000). [file:24]</li>
@@ -512,10 +493,37 @@
       <div class="card" style="margin-top:14px;">
         <h3>Selected international publications</h3>
         <ol class="pub-list">
-          <li>Pati, P., Patel, S., Desai, N., &amp; Mankad, A. (2019). Assessing changes on the shoreline due to climate change and human activities: A review of Odisha. International Journal of Scientific Research and Review, 8(4), 803‑807.</li>
-          <li>Patel, H., Desai, N., &amp; Maitreya, B. (2019). A review of studies on wetland ecosystems with a case example of Nal Sarovar Bird Sanctuary using geoinformatics techniques. International Journal of Scientific Research and Review, 8(4), 733‑740.</li>
-          <li>Desai, N., Patel, P., Prajapati, D., &amp; Mankad, A. (2018). Applications of geospatial techniques for conservation of wetlands and avifauna: Thol Bird Sanctuary. International Journal of Recent Scientific Research, 9(4M), 26432‑26436.</li>
+          <li>Pati, P., Patel, S., Desai, N., &amp; Mankad, A. (2019). Assessing changes on the shoreline due to climate change and human activities: A review of Odisha. International Journal of Scientific Research and Review, 8(4), 803‑807. [file:24]</li>
+          <li>Patel, H., Desai, N., &amp; Maitreya, B. (2019). A review of studies on wetland ecosystems with a case example of Nal Sarovar Bird Sanctuary using geoinformatics techniques. International Journal of Scientific Research and Review, 8(4), 733‑740. [file:24]</li>
+          <li>Desai, N., Patel, P., Prajapati, D., &amp; Mankad, A. (2018). Applications of geospatial techniques for conservation of wetlands and avifauna: Thol Bird Sanctuary. International Journal of Recent Scientific Research, 9(4M), 26432‑26436. [file:24]</li>
         </ol>
+      </div>
+    </section>
+
+    <!-- Awards & Certifications -->
+    <section id="awards">
+      <h2 class="section-title">Awards & certifications</h2>
+      <p class="section-sub">Recognitions and fellowships for research, teaching and sustainability leadership. [file:24]</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <ul class="list">
+            <li>UGC NET Qualified – Assistant Professorship, Environmental Sciences (2019). [file:24]</li>
+            <li>UGC Rajiv Gandhi National Fellowship – JRF–SRF (2012 – 2017). [file:24]</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>Best Poster Award – International Conference CCIM 2019 (Research Category). [file:24]</li>
+            <li>First Prize Poster Presentation – ICE TRAY 2015 (Research Category). [file:24]</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>RUSA Faculty Development Programme – Tools and Techniques in Biological Sciences (2018). [file:24]</li>
+            <li>TERI University BLISS – Sustainability Science Summer School, New Delhi (2013). [file:24]</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -529,7 +537,7 @@
           <h3>Email & phone</h3>
           <p>Email: <a href="mailto:nirmaldesai329@gmail.com">nirmaldesai329@gmail.com</a></p>
           <p>Phone: <a href="tel:+918000484757">+91‑8000484757</a></p>
-          <p>Location: Ahmedabad, Gujarat 380019, India.</p>
+          <p>Location: Ahmedabad, Gujarat, India.</p>
         </div>
 
         <div class="card">
